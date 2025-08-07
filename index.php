@@ -9,5 +9,11 @@
     <?php
         echo 'Utilizando a tag padrão';
     ?>
+
+    <br>
+
+    <?= 'Utilizando a tag impressão'?>
+    <br>
+    <? 'Utilizando a tag curta' ?>
 </body>
 </html>
