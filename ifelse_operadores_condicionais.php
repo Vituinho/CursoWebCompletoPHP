@@ -6,7 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
-
+    <a href="ifelse_operadores_logicos.php">Proxima aula</a>
     <?php
 
         //==
