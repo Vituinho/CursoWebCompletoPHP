@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <a href="variaveis_constantes.php">Proxima aula</a>
+
     <?php
 
     $nome = 'Maria';
