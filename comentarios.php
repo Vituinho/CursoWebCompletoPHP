@@ -6,6 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
+    <a href="variaveis.php">Proxima aula</a>
     <!-- Comentário -->
     <?php
     // Comentário de uma linha
