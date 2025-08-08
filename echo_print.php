@@ -6,6 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
+    <a href="comentarios.php">Proxima aula</a>
     <?php
       echo 'Comando echo<br>';
       
