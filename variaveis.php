@@ -6,7 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
-    
+    <a href="concatenacao.php">Proxima aula</a>
     <?php
 
         // string
