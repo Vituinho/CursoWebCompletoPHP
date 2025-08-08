@@ -6,6 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
+    <a href="ifelse_operadores_condicionais.php">Proxima aula</a>
     <?php 
 
         define ('BD_URL','endereco_bd_dev');
