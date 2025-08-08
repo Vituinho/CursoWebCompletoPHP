@@ -6,18 +6,12 @@
     <title>Curso PHP</title>
 </head>
 <body>
-    <a href="echo_print.php">Proxima aula</a>
-
     <?php
-        echo 'Utilizando a tag padrão';
-    ?>
+      echo 'Comando echo<br>';
+      
+      print 'Comando print<hr>';
+    ?>   
 
-    <br>
 
-    <?= 'Utilizando a tag impressão'?>
-    <br>
-    <?php
-        echo 'Não tem tag curta';
-    ?>
 </body>
 </html>
