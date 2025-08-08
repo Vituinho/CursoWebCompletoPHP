@@ -9,7 +9,11 @@
     <?php
       echo 'Comando echo<br>';
       
-      print 'Comando print<hr>';
+      echo print 'Comando print<hr>';
+
+      $receba = "João";
+
+      echo $receba;
     ?>   
 
 
