@@ -6,6 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
+    <a href="operadores_aritmeticos.php">Proxima aula</a>
     <?php
         //gettype() => retorna o tipo da varíavel
         $valor = false;
