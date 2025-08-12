@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="funcoes.php">Proxima aula</a>
 
     <h3>Pós-incremento</h3>
     <?php
