@@ -6,6 +6,7 @@
     <title>Curso PHP</title>
 </head>
 <body>
+    <a href="funcoes_matematicas.php">Proxima aula</a>
     <?php
         $texto = "Curso Completo de PHP";
 
