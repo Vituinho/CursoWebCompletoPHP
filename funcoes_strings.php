@@ -33,7 +33,7 @@
         echo str_replace('P', 'F', $texto);
 
         echo '<hr>';
-        //l
+        //sub string
         echo $texto . '<br>';
         echo substr($texto, 0, 14) . '...';
     ?>
