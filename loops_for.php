@@ -6,8 +6,8 @@
     <title>Curso PHP</title>
 </head>
 <body>
-    
-    <a href=""></a>
+
+    <a href="loops_pratica_1.php">Proxima aula</a>
     
     <?php
 
@@ -22,7 +22,11 @@
     } while($x < 10);
     */
 
-    for ($x = 1; $x <= 10; $x++) {
+    for ($x = 10; $x > 0; $x--) {
+
+        //break
+        //continue
+
         echo "$x <br>";
     }
 
