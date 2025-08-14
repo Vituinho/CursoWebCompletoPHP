@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <a href="app_help_desk/"></a>
+    <a href="app_help_desk/index.php">Proxima aula</a>
 
     
     <?php
