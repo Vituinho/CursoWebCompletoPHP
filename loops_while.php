@@ -7,20 +7,22 @@
 </head>
 <body>
     
+    <a href="loops_do_while.php">Proxima aula</a>
+
     <?php
 
         $num = 0;
         echo '-- Início do loop --<br>';
         while($num <= 10) {
             
-            $num += 1; //critério de parada
+            $num ++; //critério de parada
             
             if ($num == 2 || $num == 6) {
                 continue;
             }
 
             echo "$num <br>";
-
+            
 
             /*
             if ($num > 100) {
