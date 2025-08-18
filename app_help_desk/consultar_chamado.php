@@ -1,24 +1,41 @@
 <?php require_once "validador_acesso.php" ?>
 
 <?php
-  
+
   //chamados
   $chamados = array();
 
-
   //abrir o arquivo.hd
-
-  $arquivo = fopen('arquivo.hd', 'r');
+  $arquivo = fopen('../../../app_help_desk/arquivo.hd', 'r');
 
   //enquanto houver registros (linhas) a serem recuperados
   while(!feof($arquivo)) { //testa pelo fim de um arquivo
-    //linhas
+    //linhas  
     $registro = fgets($arquivo);
-    $chamados[] = $registro;
+
+    //explode dos detalhes do registro para verificar o id do usuário responsável pelo cadastro
+    $registro_detalhes = explode('#', $registro);
+
+    //(perfil id = 2) só vamos exibir o chamado, se ele foi criado pelo usuário
+    if($_SESSION['perfil_id'] == 2) {
+
+      //se usuário autenticado não for o usuário de abertura do chamado então não faz nada
+      if($_SESSION['id'] != $registro_detalhes[0]) {
+        continue; //não faz nada
+
+      } else {
+        $chamados[] = $registro; //adiciona o registro do arquivo ao array $chamados
+      }
+
+    } else {
+      $chamados[] = $registro; //adiciona o registro do arquivo ao array $chamados
+    }
+
   }
 
+  //fechar o arquivo aberto
   fclose($arquivo);
-
+  
 ?>
 
 <html>
@@ -48,7 +65,7 @@
         <li class="nav-item">
           <a class="nav-link" href="logoff.php">SAIR</a>
         </li>
-        </ul>
+      </ul>
     </nav>
 
     <div class="container">    
@@ -61,27 +78,27 @@
             </div>
             
             <div class="card-body">
-              
-            <?php
-              foreach($chamados as $chamado) {
-                
-            ?>
-            
-            <?php
-              $chamado_dados = explode('#', $chamado);
-                
-              if(count($chamado_dados) < 3) {
-                continue;
-              }
-            ?>
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title"><?=$chamado_dados[0]?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[1]?></h6>
-                  <p class="card-text"><?=$chamado_dados[2]?></p>
 
+              <?php foreach($chamados as $chamado) { ?>
+              
+                <?php
+
+                  $chamado_dados = explode('#', $chamado);
+
+					        //não existe detalhes do chamado se ele não estiver completo
+                  if(count($chamado_dados) < 3) {
+                    continue;
+                  }
+
+                ?>
+                <div class="card mb-3 bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title"><?=$chamado_dados[1]?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[2]?></h6>
+                    <p class="card-text"><?=$chamado_dados[3]?></p>
+
+                  </div>
                 </div>
-              </div>
 
               <?php } ?>
 
